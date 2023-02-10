@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visits",
+  "info": {
+    "singularName": "visit",
+    "pluralName": "visits",
+    "displayName": "Visit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rentgen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "ct": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "patient": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::patient.patient"
+    },
+    "echo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "analysis": {
+      "type": "text",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "drugs": {
+      "type": "text",
+      "required": false
+    },
+    "injections": {
+      "type": "text"
+    },
+    "diagnosis": {
+      "type": "string"
+    }
+  }
+}

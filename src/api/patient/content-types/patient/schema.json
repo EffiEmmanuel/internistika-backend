@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "patients",
+  "info": {
+    "singularName": "patient",
+    "pluralName": "patients",
+    "displayName": "Patient",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "middleName": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfBirth": {
+      "type": "date",
+      "required": true
+    },
+    "bloodType": {
+      "type": "string",
+      "required": true
+    },
+    "height": {
+      "type": "decimal",
+      "required": true
+    },
+    "weight": {
+      "type": "decimal",
+      "required": true
+    },
+    "profession": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "telephoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": false
+    }
+  }
+}
