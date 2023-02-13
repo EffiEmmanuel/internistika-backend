@@ -32,7 +32,7 @@
       "type": "date",
       "required": true
     },
-    "bloodType": {
+    "bloodGroup": {
       "type": "string",
       "required": true
     },
@@ -64,6 +64,12 @@
       "type": "email",
       "required": true,
       "unique": false
+    },
+    "visits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::visit.visit",
+      "mappedBy": "patient"
     }
   }
 }

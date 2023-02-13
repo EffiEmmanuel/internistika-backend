@@ -4,7 +4,8 @@
   "info": {
     "singularName": "visit",
     "pluralName": "visits",
-    "displayName": "Visit"
+    "displayName": "Visit",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,39 +13,37 @@
   "pluginOptions": {},
   "attributes": {
     "rentgen": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "ct": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
-    },
-    "patient": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::patient.patient"
+      ]
     },
     "echo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "analysis": {
       "type": "text",
@@ -63,6 +62,12 @@
     },
     "diagnosis": {
       "type": "string"
+    },
+    "patient": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::patient.patient",
+      "inversedBy": "visits"
     }
   }
 }
