@@ -4,7 +4,8 @@
   "info": {
     "singularName": "appointment",
     "pluralName": "appointments",
-    "displayName": "Appointment"
+    "displayName": "Appointment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,11 +18,15 @@
     },
     "date": {
       "type": "date",
-      "required": true
+      "required": false
     },
     "time": {
       "type": "text",
-      "required": true
+      "required": false
+    },
+    "markedAsDone": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
